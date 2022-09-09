@@ -31,13 +31,13 @@ void FeedbackConfig::fill_from_parse(Json::Value const& jsfbcfg)
     json_parse(cfg_t, t);
 
 
-    auto const& cfg_servo_constraint = json_get(cfg_transverse_feedback, "servo_constraint");
+    // auto const& cfg_servo_constraint = json_get(cfg_transverse_feedback, "servo_constraint");
     
-    auto const& cfg_sc_t = json_get(cfg_servo_constraint, "phi");
-    json_parse(cfg_sc_t, sc_t);
+    // auto const& cfg_sc_t = json_get(cfg_servo_constraint, "phi");
+    // json_parse(cfg_sc_t, sc_t);
 
-    auto const& cfg_sc_c = json_get(cfg_servo_constraint, "theta");
-    json_parse(cfg_sc_c, sc_c);
+    // auto const& cfg_sc_c = json_get(cfg_servo_constraint, "theta");
+    // json_parse(cfg_sc_c, sc_c);
 
     // auto const& cfg_sc_k = json_get(cfg_servo_constraint, "k");
     // json_parse(cfg_sc_k, sc_k);

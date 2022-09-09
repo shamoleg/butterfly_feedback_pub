@@ -284,8 +284,8 @@ static double get_torque(BflySignals const& signals, FeedbackConfig const& fbcfg
     phi -= _PI * n;
     theta -= _PI * n;
     
-    static const spline spline_dphi_sham(3, fbcfg.phi, fbcfg.dphi,  "none");
-    static const spline spline_vc_sham(3, fbcfg.phi, fbcfg.theta,  "none");
+    static const spline spline_dphi_sham(3, fbcfg.phi, fbcfg.dphi,  "periodic");
+    static const spline spline_vc_sham(3, fbcfg.phi, fbcfg.theta,  "periodic");
 
     auto dphi_s = spline_dphi_sham(phi);
     auto theta_s = spline_vc_sham(phi);
@@ -293,9 +293,9 @@ static double get_torque(BflySignals const& signals, FeedbackConfig const& fbcfg
     auto vc2 = spline_vc_sham(phi, 2);
     
 
-    static const spline spline_ky_sham(3, fbcfg.phi, fbcfg.k_c1, "none");
-    static const spline spline_kdy_sham(3, fbcfg.phi, fbcfg.k_c2, "none");
-    static const spline spline_kz_sham(3, fbcfg.phi, fbcfg.k_c3, "none");
+    static const spline spline_ky_sham(3, fbcfg.phi, fbcfg.k_c1, "periodic");
+    static const spline spline_kdy_sham(3, fbcfg.phi, fbcfg.k_c2, "periodic");
+    static const spline spline_kz_sham(3, fbcfg.phi, fbcfg.k_c3, "periodic");
     auto ky = spline_ky_sham(phi);
     auto kdy = spline_kdy_sham(phi);
     auto kz = spline_kz_sham(phi);
