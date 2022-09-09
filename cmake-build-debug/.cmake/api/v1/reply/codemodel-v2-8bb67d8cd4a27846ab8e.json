@@ -1,0 +1,291 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6
+					]
+				},
+				{
+					"build" : "3rd_party/cppmisc",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-3rd_party.cppmisc-Debug-ca554799f68dbf40a74e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "3rd_party/cppmisc",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "3rd_party/cppmisc/tests",
+					"jsonFile" : "directory-3rd_party.cppmisc.tests-Debug-ce046b374451f798f35f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "3rd_party/cppmisc/tests",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						7,
+						12
+					]
+				},
+				{
+					"build" : "3rd_party/cppnetworking",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-3rd_party.cppnetworking-Debug-c5f144ac9b2006fe99c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "3rd_party/cppnetworking",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "3rd_party/cppnetworking/tests",
+					"jsonFile" : "directory-3rd_party.cppnetworking.tests-Debug-6aaaccbffdd827f59cdb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "3rd_party/cppnetworking/tests",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						5
+					],
+					"name" : "butterfly_feedback",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						6,
+						8,
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "cppmisc",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						7,
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "networking",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "butterfly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-butterfly-Debug-813b5f251d4569a6c29a.json",
+					"name" : "butterfly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cppmisc::@3f3951adff1bafb35131",
+					"jsonFile" : "target-cppmisc-Debug-61999c70ad665a1efa69.json",
+					"name" : "cppmisc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "files_test::@b71757ab8e5d207645bd",
+					"jsonFile" : "target-files_test-Debug-a43892625e93ca5df4ec.json",
+					"name" : "files_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "json_test::@b71757ab8e5d207645bd",
+					"jsonFile" : "target-json_test-Debug-dfa65f092e0c48f74642.json",
+					"name" : "json_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "measurements::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-measurements-Debug-fa3a488eab127c06084f.json",
+					"name" : "measurements",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "networking::@c9faaf545bd524b73c09",
+					"jsonFile" : "target-networking-Debug-a7fb205eaa74897eeef7.json",
+					"name" : "networking",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "overturn_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-overturn_controller-Debug-177ad88689980bf13a9b.json",
+					"name" : "overturn_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "task_queue_test::@b71757ab8e5d207645bd",
+					"jsonFile" : "target-task_queue_test-Debug-949db303f52232869f6f.json",
+					"name" : "task_queue_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "test_cam::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_cam-Debug-92cfd3bab6265c6a9d28.json",
+					"name" : "test_cam",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "test_moving_average::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_moving_average-Debug-58d101382d2c69ba79c6.json",
+					"name" : "test_moving_average",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "test_servo_control::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_servo_control-Debug-77a3c968304523095ba1.json",
+					"name" : "test_servo_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "test_servo_pos::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-test_servo_pos-Debug-c30e8bed4b7b8bab40d2.json",
+					"name" : "test_servo_pos",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "thread_pool_test::@b71757ab8e5d207645bd",
+					"jsonFile" : "target-thread_pool_test-Debug-c3fd18e1d919d0c656ec.json",
+					"name" : "thread_pool_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "udp_test::@ed9649103429c97b6f1c",
+					"jsonFile" : "target-udp_test-Debug-fd5691e7bedf51da6961.json",
+					"name" : "udp_test",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/butterfly/students/sham/butterfly-feedback-pub/cmake-build-debug",
+		"source" : "/home/butterfly/students/sham/butterfly-feedback-pub"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

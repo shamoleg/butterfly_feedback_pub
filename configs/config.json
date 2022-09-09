@@ -1,0 +1,19 @@
+{
+    "servo": {
+        "ip": "192.168.7.2",
+        "port": 11006
+    },
+
+    "camera": {
+        "ip": "127.0.0.1",
+        "port": 11005
+    },
+
+    "controller": {
+        "cam_delay_usec": 8000
+    },
+
+    "traces": {
+        "enable": ["debug", "error", "warning", "all"]
+    }
+}
