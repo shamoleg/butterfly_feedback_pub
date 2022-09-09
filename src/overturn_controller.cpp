@@ -275,17 +275,14 @@ static double get_torque_sham3(BflySignals const& signals, FeedbackConfig const&
 
 static double get_torque(BflySignals const& signals, FeedbackConfig const& fbcfg)
 {
-
     double theta = signals.theta;
     double phi = signals.phi;
     double dtheta = signals.dtheta;
     double dphi = signals.dphi;
 
-    // info_msg("phi_b = ", phi, " theta_b = ", theta);
     auto n = int(floor(phi / _PI));
     phi -= _PI * n;
     theta -= _PI * n;
-    // info_msg("phi = ", phi, " theta = ", theta);
     
     static const spline spline_dphi_sham(3, fbcfg.phi, fbcfg.dphi,  "none");
     static const spline spline_vc_sham(3, fbcfg.phi, fbcfg.theta,  "none");
@@ -320,9 +317,11 @@ static double get_torque(BflySignals const& signals, FeedbackConfig const& fbcfg
     auto invM = inv(M);
     auto K = invL * invM;
 
-    // info_msg("phi = ", phi, " theta = ", theta);
 
     auto tau = (v + (K * (G + C * dq_s)).at(0,0) + vc2 * pow(dphi_s, 2)) / K.at(0,0);
+    info_msg("[log] " ,"t=", signals.t, ",torque=", signals.torque, ",theta=", theta, ",phi=", phi, 
+             ",dtheta=", dtheta, ",dphi=", dphi, ",x=", signals.x, ",y=", signals.y);
+
     return tau;
 }
 
@@ -357,8 +356,8 @@ int launch(Json::Value const& jscfg, Json::Value const& fbcfg)
 int main(int argc, char const* argv[])
 {
    Arguments args({
-//      Argument("-c", "config", "path to json config file", "", ArgumentsCount::One),
-//      Argument("-f", "feedback", "path to json feedback config file", "", ArgumentsCount::One)
+     Argument("-c", "config", "path to json config file", "", ArgumentsCount::One),
+     Argument("-f", "feedback", "path to json feedback config file", "", ArgumentsCount::One)
    });
 
 
@@ -367,11 +366,11 @@ int main(int argc, char const* argv[])
 
     try
     {
-//       auto&& m = args.parse(argc, argv);
-//       Json::Value const& cfg = json_load(m["config"]);
-//       Json::Value const& fbcfg = json_load(m["feedback"]);
-     Json::Value const& cfg = json_load("/home/butterfly/students/sham/butterfly-feedback-pub/configs/config.json");
-     Json::Value const& fbcfg = json_load("/home/butterfly/Downloads/feedback_parameters.json");
+      auto&& m = args.parse(argc, argv);
+      Json::Value const& cfg = json_load(m["config"]);
+      Json::Value const& fbcfg = json_load(m["feedback"]);
+    //  Json::Value const& cfg = json_load("/home/butterfly/students/sham/butterfly-feedback-pub/configs/config.json");
+    //  Json::Value const& fbcfg = json_load("/home/butterfly/Downloads/feedback_parameters.json");
         
 
         traces::init(json_get(cfg, "traces"));
